@@ -1,8 +1,8 @@
-var waitinglist = {
+var waitlist = {
     custName: "",
     custEmail: "",
     custID: "",
     phoneNum: ""
 };
 
-module.exports = waitinglist;
+module.exports = waitlist;

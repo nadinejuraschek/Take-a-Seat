@@ -8,5 +8,22 @@
 </head>
 <body>
     <h1>TABLES</h1>
+
+    <!-- JAVASCRIPT, JQUERY -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        function runTableQuery() {
+            var currentURL = window.location.origin;
+            $.ajax({url: currentURL + '/api/tables', method: "GET"})
+                .done(function(tables){
+                    console.log("------------------------------------");
+                    console.log("URL: " + currentURL + "/api/tables");
+                    console.log("------------------------------------");
+                    console.log(tables);
+                    console.log("------------------------------------");
+            });
+        };
+        runTableQuery();
+    </script>
 </body>
 </html>
