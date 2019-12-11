@@ -30,11 +30,36 @@
                         $("#tableSection").append(tableSection);
 
                         var tableNum = i + 1;
-                        $('#tableWell-' + i+1))append('<h2><span class="label label-primary">' + tableNum + '</span> | ' + tables[i].customerID + '</h2>');
+                        $('#tableWell-' + i+1)append('<h2><span class="label label-primary">' + tableNum + '</span> | ' + tables[i].customerID + '</h2>');
                     }
             });
         };
+
+        function runWaitlistQuery() {
+            var currentURL = window.location.origin;
+            $.ajax({url: currentURL + '/api/waitlist', method: "GET"})
+                .done(function(tables){
+                    console.log("------------------------------------");
+                    console.log("URL: " + currentURL + "/api/waitlist");
+                    console.log("------------------------------------");
+                    console.log(waitlist);
+                    console.log("------------------------------------");
+
+                    for(var i=0; i<waitlist.length; i++) {
+                        console.log(waitlist[i]);
+                        var waitlistSection = $('<div>');
+                        waitlistSection.addClass("well");
+                        waitlistSection.attr('id', 'waitlistWell-' + i+1);
+                        $("#waitlistSection").append(waitlistSection);
+
+                        var waitlistNum = i + 1;
+                        $('#waitlistWell-' + i+1)append('<h2><span class="label label-primary">' + waitlistNum + '</span> | ' + waitlist[i].customerID + '</h2>');
+                    }
+            });
+        };
+
         runTableQuery();
+        runWaitlistQuery();
     </script>
 </body>
 </html>
