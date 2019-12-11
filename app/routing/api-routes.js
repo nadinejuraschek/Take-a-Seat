@@ -8,4 +8,14 @@ module.exports = function(app) {
     app.get('/api/waitlist', function(req,res) {
         res.json(waitlist);
     });
+
+    app.post('/api/tables', function(req, res) {
+        if(tables.length < 5) {
+            tables.push(req.body);
+            res.json(true);
+        } else {
+            waitlist.push(req.body);
+            res.json(false);
+        }
+    });
 };
