@@ -18,4 +18,12 @@ module.exports = function(app) {
             res.json(false);
         }
     });
+
+    app.post('/api/clear', function() {
+        tables = [];
+        waitlist = [];
+
+        console.log(tables);
+        console.log(waitlist);
+    });
 };
