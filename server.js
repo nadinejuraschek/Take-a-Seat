@@ -1,6 +1,9 @@
 /***************************************
 MODULES, PACKAGES
 ***************************************/
+// CORE MODULES
+const path = require('path');
+
 // NPM PACKAGES
 const express = require('express');
 const bodyParser = require('body-parser');
