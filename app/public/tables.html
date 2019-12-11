@@ -21,6 +21,17 @@
                     console.log("------------------------------------");
                     console.log(tables);
                     console.log("------------------------------------");
+
+                    for(var i=0; i<tables.length; i++) {
+                        console.log(tables[i]);
+                        var tableSection = $('<div>');
+                        tableSection.addClass("well");
+                        tableSection.attr('id', 'tableWell-' + i+1);
+                        $("#tableSection").append(tableSection);
+
+                        var tableNum = i + 1;
+                        $('#tableWell-' + i+1))append('<h2><span class="label label-primary">' + tableNum + '</span> | ' + tables[i].customerID + '</h2>');
+                    }
             });
         };
         runTableQuery();
