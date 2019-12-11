@@ -58,6 +58,11 @@
             });
         };
 
+        function clearTable() {
+            var currentURL = window.location.origin;
+            $.ajax( {url: currentURL + "/api/clear", method: "POST"})
+        };
+
         runTableQuery();
         runWaitlistQuery();
     </script>
