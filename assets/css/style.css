@@ -1,0 +1,9 @@
+.jumbotron {
+    background-image: url(../../assets/images/expressRestaurantPic.png); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+    margin-left: -112px;
+}
