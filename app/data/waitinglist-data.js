@@ -1,8 +1,3 @@
-var waitlist = {
-    custName: "",
-    custEmail: "",
-    custID: "",
-    phoneNum: ""
-};
+var waitlist = [];
 
 module.exports = waitlist;
