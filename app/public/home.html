@@ -13,46 +13,30 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <h1>HOME</h1>
-    <header>
-        <div class="overlay"></div>
-        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-            <source src="../" type="video/mp4">
-        </video>
-        <div class="container h-100">
-            <div class="d-flex h-100 text-center align-items-center">
-                <div class="w-100 text-white">
-                    <h1 class="display-3">Video Header</h1>
-                    <p class="lead mb-0">With HTML5 Video and Bootstrap 4</p>
-                </div>
-            </div>
-        </div>
-    </header>
 
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="/">
+      <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+      Restaurant Name
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
   
-    <div class="container">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/api/tables">API Tables <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/api/waitlist">API Waitlist </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 
-        <div class="jumbotron">
-          <h1 class="text-center"><span class="fa fa-fire"></span> Hot Restaurant</h1>
-          <hr>
-          <h2 class="text-center">We only have 5 tables! Book your seat before they all are gone!</h2>
-          <br>
-    
-          <div class="text-center">
-            <a href="/tables"><button class="btn btn-lg btn-primary"><span class="fa fa-list-alt"></span> View Tables</button></a>
-            <a href="/reserve"><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make Reservation</button></a>
-          </div>
-    
-        </div>
-    
-        <footer class="footer">
-          <div class="container">
-            <p><a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a>
-          </div>
-        </footer>
-    
-      </div>    
+  <!-- MAIN --> 
 
     <!-- JAVASCRIPT, JQUERY -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
