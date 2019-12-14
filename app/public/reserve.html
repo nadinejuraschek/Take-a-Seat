@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Take a Seat - Reserve a Table</title>
 
-    <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../assets/css/style.css">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Take a Seat - Reserve a Table</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
+
 <body>
   <!-- NAVBAR -->
   <nav class="navbar sticky-top navbar-expand-lg bg-light">
@@ -17,10 +20,11 @@
       <img src="/docs/4.4/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt="">
       The Happy Bean
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-  
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active">
@@ -32,91 +36,92 @@
       </ul>
     </div>
   </nav>
-  
+
   <!-- MAIN -->
-    <div class="container">
+  <div class="container">
 
-        <div class="jumbotron">
-          <h1 class="text-center">
-            <span class="fa fa-fire"></span> Hot Restaurant</h1>
-          <hr>
-          <h2 class="text-center">Make your reservation</h2>
-          <br>
-          <div class="text-center">
-            <a href="/tables">
-              <button class="btn btn-lg btn-primary">
-                <span class="fa fa-list-alt"></span> View Tables</button>
-            </a>
-            <a href="/">
-              <button class="btn btn-lg btn-default">
-                <span class="fa fa-home"></span>
-              </button>
-            </a>
+    <div class="jumbotron">
+      <h1 class="text-center">
+        <span class="fa fa-fire" style="color: white;"></span> The Happy Bean</h1>
+      <hr>
+      <h2 class="text-center" style="color: white;">Make your reservation</h2>
+      <br>
+      <div class="text-center">
+        <a href="/tables">
+          <button class="btn btn-lg btn-primary">
+            <span class="fa fa-list-alt"></span> View Tables</button>
+        </a>
+        <a href="/">
+          <button class="btn btn-lg btn-default">
+            <span class="fa fa-home"></span>
+          </button>
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <!-- Reservation Page -->
+        <div class="card">
+          <div class="card-header">
+            Table Reservation
+          </div>
+          <div class="card-body">
+            <form role="form">
+              <div class="form-group">
+                <label for="reserve-name">Name</label>
+                <input type="text" class="form-control" id="reserve-name">
+              </div>
+              <div class="form-group">
+                <label for="reserve-phone">Phone Number</label>
+                <input type="text" class="form-control" id="reserve-phone">
+              </div>
+              <div class="form-group">
+                <label for="reserve-mail">Email</label>
+                <input type="text" class="form-control" id="reserve-mail">
+              </div>
+              <div class="form-group">
+                <label for="reserve-unique-id">Unique ID</label>
+                <input type="text" class="form-control" id="reserve-uniqueID">
+              </div>
+              <button type="submit" class="btn btn-primary submit">Submit</button>
+            </form>
           </div>
         </div>
-        <div class="row">
-          <div class="col-lg-12">
-            <!-- Reservation Page -->
-            <div class="card">
-              <div class="card-header">
-                Table Reservation
-              </div>
-              <div class="card-body">
-                <form role="form">
-                  <div class="form-group">
-                    <label for="reserve-name">Name</label>
-                    <input type="text" class="form-control" id="reserve-name">
-                  </div>
-                  <div class="form-group">
-                    <label for="reserve-phone">Phone Number</label>
-                    <input type="text" class="form-control" id="reserve-phone">
-                  </div>
-                  <div class="form-group">
-                    <label for="reserve-mail">Email</label>
-                    <input type="text" class="form-control" id="reserve-mail">
-                  </div>
-                  <div class="form-group">
-                    <label for="reserve-unique-id">Unique ID</label>
-                    <input type="text" class="form-control" id="reserve-uniqueID">
-                  </div>
-                  <button type="submit" class="btn btn-primary submit">Submit</button>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-    
-      </div>    
+      </div>
+    </div>
 
-    <!-- JAVASCRIPT, JQUERY -->
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $('.submit').on('click', function() {
-            event.preventDefault();
-            var newReservation = {
-                custName: $("#reserve-name").val().trim(),
-                phoneNum: $("#reserve-phone").val().trim(),
-                custEmail: $("#reserve-mail").val().trim(),
-                custID: $("#reserve-uniqueID").val().trim()
-            };
+  </div>
 
-        console.log(newReservation);
+  <!-- JAVASCRIPT, JQUERY -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    $('.submit').on('click', function () {
+      event.preventDefault();
+      var newReservation = {
+        custName: $("#reserve-name").val().trim(),
+        phoneNum: $("#reserve-phone").val().trim(),
+        custEmail: $("#reserve-mail").val().trim(),
+        custID: $("#reserve-uniqueID").val().trim()
+      };
 
-        $.post('/api/tables', newReservation).then(data => {
-            if (data == true) {
-                console.log('Yay! Your table is ready!');
-            } else {
-                console.log("Sorry, we couldn't process your booking.");
-            };
+      console.log(newReservation);
 
-            // clear user fields after submit was clicked
-            $('#reserve_name').val("");
-            $('#reserve_phone').val("");
-            $('#reserve_mail').val("");
-            $('#reserve_uniqueID').val("");
-        });
-        return false;
+      $.post('/api/tables', newReservation).then(data => {
+        if (data == true) {
+          console.log('Yay! Your table is ready!');
+        } else {
+          console.log("Sorry, we couldn't process your booking.");
+        };
+
+        // clear user fields after submit was clicked
+        $('#reserve_name').val("");
+        $('#reserve_phone').val("");
+        $('#reserve_mail').val("");
+        $('#reserve_uniqueID').val("");
+      });
+      return false;
     });
-    </script>
+  </script>
 </body>
+
 </html>
