@@ -1,8 +1,3 @@
-var tables = {
-    custName: "",
-    custEmail: "",
-    custID: "",
-    phoneNum: ""
-};
-
+var tables = [];
+  
 module.exports = tables;

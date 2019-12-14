@@ -1,5 +1,5 @@
-const tables = require('../data/table-data.js');
-const waitlist = require('../data/waitinglist-data.js');
+var tables = require('../data/table-data.js');
+var waitlist = require('../data/waitinglist-data.js');
 
 module.exports = function(app) {
     app.get('/api/tables', function(req,res) {
@@ -10,9 +10,11 @@ module.exports = function(app) {
     });
 
     app.post('/api/tables', function(req, res) {
+        console.log(req.body);
+
         if(tables.length < 5) {
             tables.push(req.body);
-            res.json(true);
+            res.json(tables);
         } else {
             waitlist.push(req.body);
             res.json(false);
@@ -20,10 +22,9 @@ module.exports = function(app) {
     });
 
     app.post('/api/clear', function() {
-        tables = [];
-        waitlist = [];
+        tables.length = 0;
+        waitlist.length = 0;
 
-        console.log(tables);
-        console.log(waitlist);
+        res.json({ ok: true });
     });
 };

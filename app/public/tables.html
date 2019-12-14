@@ -7,8 +7,8 @@
     <title>Take a Seat - Tables</title>
 
     <!-- STYLESHEETS -->
-    <link rel="stylesheet" href="../../assets/css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../assets/css/style.css">
 </head>
 <body>
     <div class="container">
@@ -63,6 +63,78 @@
 
     <!-- JAVASCRIPT, JQUERY -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript" src="../app.js"></script>
+    <script type="text/javascript">
+    function runTableQuery() {
+        $.ajax({url: '/api/tables', method: "GET"})
+            .then(function(tables){
+                console.log("------------------------------------");
+                console.log("URL: /api/tables");
+                console.log("------------------------------------");
+                console.log(tables);
+                console.log("------------------------------------");
+
+                for(var i=0; i<tables.length; i++) {
+                    var tableList = $("#tableList");
+                    console.log(tables[i]);
+                    var tableItem = $('<li class="li-group-item mt-4">');
+
+                    tableItem.append(
+                        $('<h2>').text('Table #' + i+1),
+                        $('<hr>'),
+                        $('<h4>').text('Name: ' + tables[i].custName),
+                        $('<h4>').text('E-Mail: ' + tables[i].custEmail),
+                        $('<h4>').text('Phone Number: ' + tables[i].phoneNum),
+                        $('<h4>').text('Customer ID: ' + tables[i].custID)
+                    )
+                    
+                    tableList.append(tableItem);
+                }
+            });
+        };
+
+    function runWaitlistQuery() {
+        $.ajax({url: '/api/waitlist', method: "GET"})
+            .done(function(waitlist){
+                console.log("------------------------------------");
+                console.log("URL: /api/waitlist");
+                console.log("------------------------------------");
+                console.log(waitlist);
+                console.log("------------------------------------");
+
+                for(var i=0; i<waitlist.length; i++) {
+                    var waitList = $("#waitList");
+                    console.log(waitlist[i]);
+                    var waitItem = $('<li class="li-group-item mt-4">');
+
+                    waitItem.append(
+                        $('<h2>').text('Table #' + i+1),
+                        $('<hr>'),
+                        $('<h4>').text('Name: ' + waitlist[i].custName),
+                        $('<h4>').text('E-Mail: ' + waitlist[i].custEmail),
+                        $('<h4>').text('Phone Number: ' + waitlist[i].phoneNum),
+                        $('<h4>').text('Customer ID: ' + waitlist[i].custID)
+                    )
+                    
+                    waitList.append(waitItem);
+                }
+        });
+    };
+
+    function clearTable() {
+        $.ajax({ url: "/api/clear", method: "POST" }).then(function() {
+        $("#waitList").empty();
+        $("#tableList").empty();
+        });
+    };
+
+    $('#clear').on('click', function() {
+        alert('Clearing...');
+        clearTable();
+        location.reload(); 
+    });
+
+    runTableQuery();
+    runWaitlistQuery();
+    </script>
 </body>
 </html>
