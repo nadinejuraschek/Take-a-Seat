@@ -5,40 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Take a Seat - Reserve a Table</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <h1>RESERVE</h1>
 
     <!-- JAVASCRIPT, JQUERY -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        $('.submit').on('click', function() {
-            var newReservation = {
-                customerName: $('#reserve_name').val().trim();
-                phoneNum: $('#reserve_phone').val().trim();
-                customerEmail: $('#reserve_mail').val().trim();
-                customerID: $('#reserve_uniqueID').val().trim();
-            };
-
-            console.log(newReservation);
-
-            var currentURL = window.location.origin;
-
-            $.post(currentURL + '/api/tables', newReservation, function(data) {
-                if (data == true) {
-                 console.log('Yay! You are booked for the holidays!');
-                }, else if {
-                    'Sorry, you are not on the waitlist');
-                }
-
-                // clear user fields after submit was clicked
-                $('#reserve_name').val("");
-                $('#reserve_phone').val("");
-                $('#reserve_mail').val("");
-                $('#reserve_uniqueID').val("");
-            });
-            return false;
-        });
-    </script>
+    <script type="text/javascript" src="../app.js"></script>
 </body>
 </html>

@@ -5,72 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Take a Seat - Tables</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
 <body>
     <h1>TABLES</h1>
 
     <!-- JAVASCRIPT, JQUERY -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script type="text/javascript">
-        function runTableQuery() {
-            var currentURL = window.location.origin;
-            $.ajax({url: currentURL + '/api/tables', method: "GET"})
-                .done(function(tables){
-                    console.log("------------------------------------");
-                    console.log("URL: " + currentURL + "/api/tables");
-                    console.log("------------------------------------");
-                    console.log(tables);
-                    console.log("------------------------------------");
-
-                    for(var i=0; i<tables.length; i++) {
-                        console.log(tables[i]);
-                        var tableSection = $('<div>');
-                        tableSection.addClass("well");
-                        tableSection.attr('id', 'tableWell-' + i+1);
-                        $("#tableSection").append(tableSection);
-
-                        var tableNum = i + 1;
-                        $('#tableWell-' + i+1)append('<h2><span class="label label-primary">' + tableNum + '</span> | ' + tables[i].customerID + '</h2>');
-                    }
-            });
-        };
-
-        function runWaitlistQuery() {
-            var currentURL = window.location.origin;
-            $.ajax({url: currentURL + '/api/waitlist', method: "GET"})
-                .done(function(tables){
-                    console.log("------------------------------------");
-                    console.log("URL: " + currentURL + "/api/waitlist");
-                    console.log("------------------------------------");
-                    console.log(waitlist);
-                    console.log("------------------------------------");
-
-                    for(var i=0; i<waitlist.length; i++) {
-                        console.log(waitlist[i]);
-                        var waitlistSection = $('<div>');
-                        waitlistSection.addClass("well");
-                        waitlistSection.attr('id', 'waitlistWell-' + i+1);
-                        $("#waitlistSection").append(waitlistSection);
-
-                        var waitlistNum = i + 1;
-                        $('#waitlistWell-' + i+1)append('<h2><span class="label label-primary">' + waitlistNum + '</span> | ' + waitlist[i].customerID + '</h2>');
-                    }
-            });
-        };
-
-        function clearTable() {
-            var currentURL = window.location.origin;
-            $.ajax( {url: currentURL + "/api/clear", method: "POST"})
-        };
-
-        $('#clear').on('click', function() {
-            alert('Clearing...');
-            clearTable();
-            location.reload(); 
-        });
-
-        runTableQuery();
-        runWaitlistQuery();
-    </script>
+    <script type="text/javascript" src="../app.js"></script>
 </body>
 </html>
