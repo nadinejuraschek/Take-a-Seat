@@ -1,7 +1,50 @@
-.jumbotron {
-    background-image: url(../images/expressRestaurantPic.png); 
-    background-position: center;
-    background-repeat: no-repeat;
+body {
+    background: linear-gradient(rgb(111, 112, 67, 0.2), rgb(111, 112, 67, 0.2)), url(../images/expressRestaurantPic.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover;
-    height: 92vh;
+}
+
+.navbar {
+    background-color: #1b1b1b;
+}
+
+.navbar a {
+    color: rgb(187, 189, 129);
+}
+
+.primary-heading, 
+.sub-heading {
+    color: #ffffff;
+}
+
+.primary-heading {
+    font-size: 6rem;
+}
+
+.sub-heading {
+    font-size: 3.5rem;
+}
+
+.btn-alone {
+    display: block;
+    margin: 10px;
+}
+
+.btn-tables,
+.btn-reservation {
+    border: 3px solid #ffffff;
+    color: #ffffff;
+    width: 20rem;
+}
+
+.btn-tables {
+    border: 3px solid #ffffff;
+}
+
+.btn-tables:hover,
+.btn-reservation:hover {
+    background-color: rgb(187, 189, 129);
+    border: 3px solid rgb(187, 189, 129);
 }
