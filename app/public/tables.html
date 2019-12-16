@@ -38,15 +38,19 @@
   <!-- MAIN -->
     <div class="container">
 
-        <div class="jumbotron">
-          <h1 class="text-center"><span class="fa fa-fire"></span> Hot Restaurant</h1>
-          <hr>
-          <h2 class="text-center">Current Reservations and Waiting List</h2>
-          <br>
-    
+        <div class="jumbotron bg-transparent">
+          <h2 class="page-heading text-center">Current Reservations and Waiting List</h2>
           <div class="text-center">
-            <a href="/reserve"><button class="btn btn-lg btn-danger"><span class="fa fa-credit-card"></span> Make Reservation</button></a>
-            <a href="/"><button class="btn btn-lg btn-default"><span class="fa fa-home"></span></button></a>
+            <a class="btn-alone" href="/">
+              <button class="btn btn-lg btn-filled">
+                Home
+              </button>
+            </a>
+            <a class="btn-alone" href="/reserve">
+              <button class="btn btn-lg btn-filled">
+              Make Reservation
+              </button></a>
+            <a href="/">
           </div>
         </div>
     
@@ -56,7 +60,7 @@
             <!-- Current Tables in Use -->
             <div class="card">
               <div class="card-header">
-                <h4>Current Reservations</h4>
+                Current Reservations
               </div>
               <div class="card-body">
                 <ul id="tableList" class="list-group"></ul>
@@ -66,7 +70,7 @@
             <!-- Waiting List Card -->
             <div class="card mt-4">
               <div class="card-header">
-                <h4>Waiting List</h4>
+                Waiting List
               </div>
               <div class="card-body">
                 <ul id="waitList" class="list-group"></ul>

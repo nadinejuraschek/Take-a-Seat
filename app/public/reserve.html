@@ -40,17 +40,17 @@
   <!-- MAIN -->
   <div class="container">
 
-    <div class="jumbotron">
-      <h2 class="sub-heading text-center">Make your reservation</h2>
+    <div class="jumbotron bg-transparent">
+      <h2 class="page-heading text-center">Make Your Reservation</h2>
       <br>
       <div class="text-center">
-        <a href="/tables">
-          <button class="btn btn-lg btn-primary">View Tables</button>
-        </a>
-        <a href="/">
-          <button class="btn btn-lg btn-default">
+        <a class="btn-alone" href="/">
+          <button class="btn btn-lg btn-filled">
             Home
           </button>
+        </a>
+        <a class="btn-alone" href="/tables">
+          <button class="btn btn-lg btn-filled">View Tables</button>
         </a>
       </div>
     </div>
@@ -59,9 +59,6 @@
       <div class="col-lg-12">
         <!-- Reservation Page -->
         <div class="card">
-          <div class="card-header">
-            Table Reservation
-          </div>
           <div class="card-body">
             <form role="form">
               <div class="form-group">
@@ -80,7 +77,7 @@
                 <label for="reserve-unique-id">Unique ID</label>
                 <input type="text" class="form-control" id="reserve-uniqueID">
               </div>
-              <button type="submit" class="btn btn-primary submit">Submit</button>
+              <button type="submit" class="btn submit">Submit</button>
             </form>
           </div>
         </div>
