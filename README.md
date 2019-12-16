@@ -5,8 +5,8 @@ A basic app demonstrating Node and Express with jQuery. The overall purpose is t
 ## Technologies
 
 Node.js
-  Express
-  Body Parser
+* Express
+* Body Parser
  
 jQuery
 
