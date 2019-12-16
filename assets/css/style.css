@@ -1,4 +1,4 @@
-body {
+.bg-img {
     background: linear-gradient(rgb(111, 112, 67, 0.2), rgb(111, 112, 67, 0.2)), url(../images/expressRestaurantPic.png) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
