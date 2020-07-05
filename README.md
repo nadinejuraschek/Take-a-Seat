@@ -4,8 +4,8 @@ A basic app demonstrating Node and Express with jQuery. The overall purpose is t
 See a live demo [here](https://thehappybean.herokuapp.com/).
 
 ## Contributors
-[Nivedita Amanjee](https://github.com/niviamanjee)
-[Nadine Juraschek](https://github.com/nadinejuraschek)
+* [Nivedita Amanjee](https://github.com/niviamanjee)
+* [Nadine Juraschek](https://github.com/nadinejuraschek)
 
 ## Technologies
 * Node.js
