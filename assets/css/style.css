@@ -1,5 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap');
+
+html, body {
+    font-family: 'Quicksand', 'Arial', sans-serif;
+    font-weight: 400;
+}
+
+h1, h2, h3 {
+    font-weight: 600;
+}
+
+.jumbotron hr {
+    background-color: #ffffff80;
+    width: 80%;
+}
+
+.btn {
+    font-weight: 600;
+}
+
 .bg-img {
-    background: linear-gradient(rgb(111, 112, 67, 0.2), rgb(111, 112, 67, 0.2)), url(../images/expressRestaurantPic.png) no-repeat center center fixed; 
+    /* background: linear-gradient(rgb(111, 112, 67, 0.2), rgb(111, 112, 67, 0.2)), url(../images/expressRestaurantPic.png) no-repeat center center fixed; */
+    background: linear-gradient(#3a3a3a10, #3a3a3a10), url(../images/expressRestaurantPic.png) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -8,13 +29,19 @@
 
 .navbar {
     background-color: #1b1b1b;
+    box-shadow: 0 4px 8px #00000020;
+    padding: 0.5rem 2rem;
 }
 
 .navbar a {
     color: rgb(187, 189, 129);
 }
 
-.primary-heading, 
+.navbar-brand {
+    font-weight: 600;
+}
+
+.primary-heading,
 .sub-heading {
     color: #ffffff;
 }
@@ -26,6 +53,10 @@
 .sub-heading,
 .page-heading  {
     font-size: 3.5rem;
+}
+
+.page-heading {
+    margin-bottom: 2rem;
 }
 
 .btn-alone {
@@ -54,7 +85,7 @@
 
 .submit,
 .submit:hover {
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .btn-filled,
@@ -68,5 +99,37 @@
 }
 
 .card {
+    border: none;
     margin-bottom: 4rem;
+}
+
+.card-header {
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+ul {
+    list-style: none;
+}
+
+ul h3 {
+    color: rgb(199, 202, 120);
+}
+
+/*========================================
+ MEDIA QUERIES
+========================================*/
+@media screen and (max-width: 600px) {
+    .primary-heading {
+        font-size: 4rem;
+    }
+    .sub-heading,
+    .page-heading  {
+        font-size: 2.5rem;
+    }
+    .btn {
+        font-size: 1rem;
+    }
 }
