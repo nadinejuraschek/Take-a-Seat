@@ -1,9 +1,6 @@
 /***************************************
 MODULES, PACKAGES
 ***************************************/
-// CORE MODULES
-const path = require('path');
-
 // NPM PACKAGES
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -22,6 +19,6 @@ app.use(express.static(__dirname + '/assets'));
 require('./app/routing/api-routes.js')(app);
 require('./app/routing/html-routes.js')(app);
 
-app.listen(PORT, function() {
-    console.log("Server has started on PORT 3000.");
+app.listen(PORT, function () {
+  console.log(`Server has started on PORT ${PORT}.`);
 });
